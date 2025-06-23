@@ -13,6 +13,7 @@ const data = async () => {
     const response = await fetch("https://fakestoreapi.com/products");
     const resJson = await response.json();
     console.log(resJson);
+    return resJson;
   } catch (err) {
     console.log("Error", err);
   }
