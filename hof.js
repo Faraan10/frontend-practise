@@ -1,3 +1,11 @@
+// these are common array methods also called as
+// Higher Order Functions (HOF)
+
+// A higher-order function is a function that takes another function as
+// an argument or returns a function.
+// Because they accept a callback function as an argument — and that
+// function is applied to each element of the array.
+
 data = [1, 2, 3];
 
 const updated = data.map((item) => item * 2);
