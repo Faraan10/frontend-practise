@@ -47,3 +47,12 @@ console.log("End");
 // JS is single-threaded, but the Event Loop helps it handle async tasks by
 // checking when the call stack is clear and then pulling in queued
 // tasks — microtasks first, then macrotasks.
+
+// why promises are executed before setTimeout, setInterval etc
+// priority Order: Microtasks vs Macrotasks
+// ✅ Microtasks > Macrotasks
+// When the call stack is empty, the event loop:
+
+// First executes all microtasks (like .then(), catch(), finally() from Promises).
+
+// Then moves on to one macrotask (like setTimeout, setInterval, setImmediate).
