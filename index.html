@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .myId {
+        background-color: lightblue;
+        height: 40px;
+        width: 120px;
+        font-family: monospace;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+
+    <input type="text" placeholder="enter name" class="update" />
+    <script>
+      document.querySelector("h1").innerText = "Hi just triggered";
+
+      const field = document.getElementsByClassName("update");
+      field[0].remove();
+
+      const box = document.createElement("button");
+
+      box.innerText = "Click here";
+      box.className = "myId";
+
+      box.addEventListener("click", () => {
+        box.style.backgroundColor = "salmon";
+        box.innerText = "just clicked";
+      });
+
+      document.body.appendChild(box);
+    </script>
+  </body>
+</html>
